@@ -11,6 +11,8 @@ func SMA(prices []float64, period int) []float64 {
 		sum += prices[i]
 	}
 
+	result[period-1] = sum / float64(period)
+
 	for i := period; i < len(prices); i++ {
 		sum = sum - prices[i-period] + prices[i]
 		result[i] = sum / float64(period)

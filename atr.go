@@ -14,7 +14,7 @@ func ATR(candles []strategyapi.Candle, period int) []float64 {
 			absf(high-prevClose),
 			absf(low-prevClose),
 		)
-		trs[i] = trs
+		trs[i] = tr
 	}
 
 	return EMA(trs, period)
